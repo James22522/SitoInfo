@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musica nel Mondo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #222;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: #444;
+      padding: 1rem 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 2rem;
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #222;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Musica nel Mondo</h1>
+    <p>Scopri la musica in Italia, America e il fenomeno K-pop</p>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showSection('italia')">Italia</a>
+    <a href="#" onclick="showSection('america')">America</a>
+    <a href="#" onclick="showSection('kpop')">K-pop</a>
+  </nav>
+
+  <section id="italia" class="active">
+    <h2>Musica Italiana</h2>
+    <p>La musica italiana spazia dalla tradizione lirica alle hit moderne. Artisti come Laura Pausini, Eros Ramazzotti e Måneskin sono conosciuti in tutto il mondo.</p>
+  </section>
+
+  <section id="america">
+    <h2>Musica Americana</h2>
+    <p>Dagli anni '50 con Elvis Presley fino a Beyoncé e Kendrick Lamar, la musica americana ha sempre influenzato il panorama mondiale.</p>
+  </section>
+
+  <section id="kpop">
+    <h2>K-pop</h2>
+    <p>Il K-pop ha conquistato milioni di fan con gruppi come BTS, BLACKPINK e EXO. Un mix di musica, danza e moda dalla Corea del Sud.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Musica nel Mondo</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
